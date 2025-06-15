@@ -45,8 +45,7 @@ Platformer Game - это консольная 2D-игра, созданная с
 
 ### Linux (Ubuntu/Debian)
 1. Установите необходимые зависимости:
-   ```
-   bash
+   ```bash
    sudo apt-get update
    sudo apt-get install g++ libncurses5-dev libncursesw5-dev
    ```
