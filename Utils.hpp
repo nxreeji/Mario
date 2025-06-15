@@ -1,6 +1,6 @@
 /** @file Utils.hpp
  * @brief Заголовочный файл для вспомогательных функций, таких как логирование.
- * @author H0ly
+ * @author KolobovaAlexsandra
  */
 
 #ifndef UTILS_HORIZON /**< Проверяет, не был ли файл уже включён, чтобы избежать повторного включения. */
@@ -11,12 +11,12 @@
 
 /** @brief Возвращает текущее время в формате строки для логирования.
  * @return Строка с текущим временем в формате [YYYY-MM-DD HH:MM:SS].
- * @author H0ly
+ * @author KolobovaAlexsandra
  */
 std::string getCurrentTime(); /**< Объявляет функцию получения текущего времени. */
 
 /** @brief Глобальная переменная debugLog для записи логов в файл debug.log.
- * @author H0ly
+ * @author KolobovaAlexsandra
  */
 extern std::ofstream debugLog; /**< Объявляет внешнюю переменную для логирования. */
 
