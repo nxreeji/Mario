@@ -50,8 +50,7 @@ Platformer Game - это консольная 2D-игра, созданная с
    sudo apt-get install g++ libncurses5-dev libncursesw5-dev
    ```
 2. Склонируйте или распакуйте проект в любую директорию:
-   ```
-   bash
+   ```bash
    git clone <repository_url>  # Если проект в репозитории
    cd platformer-game
    ```
@@ -59,19 +58,16 @@ Platformer Game - это консольная 2D-игра, созданная с
 
 ### macOS
 1. Установите Homebrew, если он не установлен:
-   ```
-   bash
+   ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 2. Установите g++ (входит в Xcode Command Line Tools) и ncurses:
-   ```
-   bash
+   ```bash
    xcode-select --install
    brew install ncurses
    ```
 3. Склонируйте или распакуйте проект:
-   ```
-   bash
+   ```bash
    git clone <repository_url>
    cd platformer-game
    ```
@@ -82,8 +78,7 @@ Platformer Game - это консольная 2D-игра, созданная с
 
 #### Вариант 1: PDCurses (рекомендуется)
 1. Установите MinGW (например, через MSYS2):
-   ```
-   bash
+   ```bash
    # Установите MSYS2 с https://www.msys2.org/
    pacman -S mingw-w64-x86_64-gcc
    pacman -S mingw-w64-x86_64-pdcurses
@@ -93,13 +88,11 @@ Platformer Game - это консольная 2D-игра, созданная с
 
 #### Вариант 2: WSL
 1. Установите WSL2 и дистрибутив Ubuntu:
-   ```
-   powershell
+   ```powershell
    wsl --install
    ```
 2. В WSL установите зависимости, как для Linux:
-   ```
-   bash
+   ```bash
    sudo apt-get update
    sudo apt-get install g++ libncurses5-dev libncursesw5-dev
    ```
@@ -108,41 +101,35 @@ Platformer Game - это консольная 2D-игра, созданная с
 
 ## Сборка
 1. Перейдите в директорию проекта:
-   ```
-   bash
+   ```bash
    cd path/to/platformer-game
    ```
 2. Скомпилируйте проект:
    - **Linux/macOS**:
-     ```
-     bash
+     ```bash
      g++ -o platformer main.cpp Game.cpp Level.cpp Player.cpp Enemy.cpp MainMenu.cpp Utils.cpp -lncurses
      ```
    - **Windows (PDCurses)**:
-     ```
-     bash
+     ```bash
      g++ -o platformer main.cpp Game.cpp Level.cpp Player.cpp Enemy.cpp MainMenu.cpp Utils.cpp -lpdcurses
      ```
    - **WSL**: Используйте команду для Linux.
 3. (Опционально) Создайте Makefile для упрощения:
-   ```
-   makefile
+   ```makefile
    all:
        g++ -o platformer main.cpp Game.cpp Level.cpp Player.cpp Enemy.cpp MainMenu.cpp Utils.cpp -lncurses
    clean:
        rm -f platformer debug.log
    ```
    Затем выполните:
-   ```
-   bash
+   ```bash
    make
    ```
 
 ## Запуск
 1. Убедитесь, что `map.txt` существует в директории с исполняемым файлом.
 2. Запустите игру:
-   ```
-   bash
+   ```bash
    ./platformer
    ```
 3. В главном меню используйте стрелки вверх/вниз для навигации и Enter для выбора:
